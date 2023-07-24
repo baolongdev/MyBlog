@@ -1,6 +1,3 @@
 [server]
 headless = true
-port = 8502
-
-[browser]
-serverAddress = "blong12.com"
+port = 8501
