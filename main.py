@@ -64,23 +64,18 @@ def Proj(PROJECTS):
 
 
 def App():
+    
     InitPageSetting(st, current_dir, "My Blog", "⭐")
-    
-    About()
-    # --- SOCIAL LINKS ---
-    Social(SOCIAL_MEDIA)
-    # --- EXPERIENCE & QUALIFICATIONS ---
-    # ExpQua()
-    # --- SKILLS ---
-    Skills()
-    # --- Projects & Accomplishments ---
-    Proj(PROJECTS)
-    
-    
-    
-    pass
-
-
+    with st.spinner("Loading..."):
+        About()
+        # --- SOCIAL LINKS ---
+        Social(SOCIAL_MEDIA)
+        # --- EXPERIENCE & QUALIFICATIONS ---
+        # ExpQua()
+        # --- SKILLS ---
+        Skills()
+        # --- Projects & Accomplishments ---
+        Proj(PROJECTS)
 
 
 

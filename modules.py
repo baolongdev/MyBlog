@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 
 def InitPageSetting(st, path, PAGE_NAME, PAGE_ICON, name_file_css="", name_file_js=""):
     current_dir = path
@@ -35,5 +36,7 @@ def Custom_Code(st, data):
 
 def Custom_JS(st, js_file):
     with open(js_file) as f:
-        st.markdown("<script>{}</script>".format(f.read()),
+        html_string = '<script language="javascript">{}</script>'.format(f.read())
+        components.html(html_string) 
+        st.markdown(html_string,
                     unsafe_allow_html=True)
